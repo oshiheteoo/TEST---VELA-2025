@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интернет-магазин техники</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top">
+        <div class="header__top-content">
+          <div class="header__contact">
+            <div class="header__contact-item">
+              <span><img src="img/point.svg" alt="#" /></span>
+              <span>Сайлент-Хилл</span>
+            </div>
+            <div class="header__contact-item">
+              <span><img src="img/phone.svg" alt="#" /></span>
+              <span>+7 &nbsp; 555 &nbsp; 555-37-50</span>
+            </div>
+          </div>
+          <div class="header__schedule">
+            <span>Ежедневно</span>
+            <span>9:00 — 21:00</span>
+          </div>
+          <nav class="header__top-nav">
+            <a href="#delivery">Доставка</a>
+            <a href="#payment">Оплата</a>
+            <a href="#contacts">Контакты</a>
+          </nav>
+        </div>
+      </div>
+      <div class="header__main">
+        <a href="#" class="header__logo">
+          <div class="header__logo-icon">
+            <img src="/img/logo.svg" alt="logo" />
+          </div>
+        </a>
+        <button
+          class="header__menu-btn"
+          id="catalogBtn"
+          aria-label="Открыть меню">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="header__search">
+          <input
+            type="text"
+            class="header__search-input"
+            placeholder="Поиск товаров..." />
+          <button class="header__search-btn">Найти</button>
+        </div>
+        <div class="header__actions">
+          <button class="header__action-btn">
+            <img src="/img/tg.svg" alt="tg" />
+          </button>
+          <button class="header__action-btn">
+            <img src="/img/wa.svg" alt="wa" />
+          </button>
+          <div class="header__lang">
+            <span><img src="/img/lang.svg" alt="lang" /></span>
+            <span style="color: #343a3f">RU |</span
+            ><span style="color: #d3d3d3 !important"> EN</span>
+          </div>
+          <button class="header__action-btn-last">
+            <img src="/img/1.svg" />
+          </button>
+          <button class="header__action-btn-last">
+            <img src="/img/2.svg" />
+          </button>
+          <button class="header__action-btn-last">
+            <img src="/img/3.svg" />
+          </button>
+        </div>
+      </div>
+      <nav class="nav">
+        <div class="nav__container">
+          <div class="nav__list">
+            <div class="nav__item">
+              <a href="#" class="nav__link">
+                <span class="nav__icon"
+                  ><img src="/img/sale.svg" alt="sale"
+                /></span>
+                <span>Акции</span>
+              </a>
+            </div>
+            <div class="nav__item">
+              <a href="#" class="nav__link">
+                <span class="nav__icon"
+                  ><img src="/img/hot.svg" alt="hot"
+                /></span>
+                <span>Горячее &nbsp; предложение</span>
+              </a>
+            </div>
+            <div class="nav__item nav__item--has-mega" id="giftNavItem">
+              <a href="#" class="nav__link" onclick="toggleGiftMenu(event)">
+                <span class="nav__icon"
+                  ><img src="/img/gift.svg" alt="gift"
+                /></span>
+                <span>Подарочные &nbsp; наборы</span>
+              </a>
+              <div class="nav__mega-menu" id="giftMenu">
+                <div class="nav__mega-menu-container">
+                  <div class="nav__mega-menu-sidebar">
+                    <ul class="nav__mega-menu-nav">
+                      <li class="nav__mega-menu-nav-item">
+                        <a
+                          href="#"
+                          class="nav__mega-menu-nav-link nav__mega-menu-nav-link--active"
+                          data-section="whom">
+                          <span class="nav__mega-menu-icon"
+                            ><img src="/img/whom.svg" alt="whom"
+                          /></span>
+                          <span>Кому</span>
+                        </a>
+                      </li>
+                      <li class="nav__mega-menu-nav-item">
+                        <a
+                          href="#"
+                          class="nav__mega-menu-nav-link"
+                          data-section="occasion">
+                          <span class="nav__mega-menu-icon"
+                            ><img src="/img/why.svg" alt="why"
+                          /></span>
+                          <span>Повод</span>
+                        </a>
+                      </li>
+                      <li class="nav__mega-menu-nav-item">
+                        <a
+                          href="#"
+                          class="nav__mega-menu-nav-link"
+                          data-section="contents">
+                          <span class="nav__mega-menu-icon"
+                            ><img src="/img/fill.svg" alt="fill"
+                          /></span>
+                          <span>Наполнение</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="nav__mega-menu-content">
+                    <div class="nav__mega-menu-section" id="section-whom">
+                      <h3 class="nav__mega-menu-title">Кому</h3>
+                      <div class="nav__mega-menu-items">
+                        <a href="#" class="nav__mega-menu-item"
+                          >Для &nbsp; мужчин
+                          <span class="nav__mega-count">123</span></a
+                        >
+                        <a href="#" class="nav__mega-menu-item"
+                          >Для &nbsp; женщин
+                          <span class="nav__mega-count">63</span></a
+                        >
+                        <a href="#" class="nav__mega-menu-item"
+                          >Папе <span class="nav__mega-count">120</span></a
+                        >
+                        <a href="#" class="nav__mega-menu-item"
+                          >Сотрудникам
+                          <span class="nav__mega-count">30</span></a
+                        >
+                        <a href="#" class="nav__mega-menu-item"
+                          >Мужу <span class="nav__mega-count">120</span></a
+                        >
+                        <a href="#" class="nav__mega-menu-item"
+                          >Корпоративный
+                          <span class="nav__mega-count">100</span></a
+                        >
+                      </div>
+                    </div>
+
+                    <div
+                      class="nav__mega-menu-section"
+                      id="section-occasion"
+                      style="display: none">
+                      <h3 class="nav__mega-menu-title">Повод</h3>
+                      <div class="nav__mega-menu-items"></div>
+                    </div>
+
+                    <div
+                      class="nav__mega-menu-section"
+                      id="section-contents"
+                      style="display: none">
+                      <h3 class="nav__mega-menu-title">Наполнение</h3>
+                      <div class="nav__mega-menu-items"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="nav__item nav__item--has-events" id="eventsNavItem">
+              <a
+                href="#"
+                class="nav__link nav__link--active"
+                onclick="toggleEventsMenu(event)">
+                <span class="nav__icon">
+                  <img src="/img/events.svg" alt="events" />
+                </span>
+                <span>События</span>
+              </a>
+              <div class="nav__events-dropdown" id="eventsDropdown">
+                <ul class="nav__events-dropdown-list">
+                  <li class="nav__events-dropdown-item">
+                    <a href="#" class="nav__events-dropdown-link">ИгроМИР</a>
+                  </li>
+                  <li class="nav__events-dropdown-item">
+                    <a href="#" class="nav__events-dropdown-link"
+                      >Мероприятия</a
+                    >
+                  </li>
+                  <li class="nav__events-dropdown-item">
+                    <a href="#" class="nav__events-dropdown-link"
+                      >Мастер-классы</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="nav__item">
+              <a href="#" class="nav__link">
+                <span class="nav__icon"
+                  ><img src="/img/brands.svg" alt="brands"
+                /></span>
+                <span>Наши &nbsp; бренды</span>
+              </a>
+            </div>
+            <button class="nav__computer-btn">
+              <span>+</span>
+              <span>Собрать компьютер</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="catalog-dropdown" id="catalogDropdown">
+        <div class="catalog-dropdown__container">
+          <div class="catalog-dropdown__sidebar">
+            <ul class="catalog-dropdown__menu">
+              <li class="catalog-dropdown__menu-item">
+                <a
+                  href="#"
+                  class="catalog-dropdown__menu-link catalog-dropdown__menu-link--active">
+                  <span class="catalog-dropdown__menu-icon"
+                    ><img src="/img/smartph.svg" alt="smartph"
+                  /></span>
+                  <span>Смартфоны &nbsp; и &nbsp; гаджеты</span>
+                </a>
+              </li>
+              <li class="catalog-dropdown__menu-item">
+                <a href="#" class="catalog-dropdown__menu-link">
+                  <span class="catalog-dropdown__menu-icon"
+                    ><img src="/img/laptop.svg" alt="laptop"
+                  /></span>
+                  <span>Ноутбуки &nbsp; и &nbsp; компьютеры</span>
+                </a>
+              </li>
+              <li class="catalog-dropdown__menu-item">
+                <a href="#" class="catalog-dropdown__menu-link">
+                  <span class="catalog-dropdown__menu-icon"
+                    ><img src="/img/tv.svg" alt="tv"
+                  /></span>
+                  <span>Телевизоры &nbsp; и &nbsp; цифровое &nbsp; ТВ</span>
+                </a>
+              </li>
+              <li class="catalog-dropdown__menu-item">
+                <a href="#" class="catalog-dropdown__menu-link">
+                  <span class="catalog-dropdown__menu-icon"
+                    ><img src="/img/audio.svg" alt="audio"
+                  /></span>
+                  <span>Аудиотехника</span>
+                </a>
+              </li>
+              <li class="catalog-dropdown__menu-item">
+                <a href="#" class="catalog-dropdown__menu-link">
+                  <span class="catalog-dropdown__menu-icon"
+                    ><img src="/img/sale.svg" alt="sale"
+                  /></span>
+                  <span>Акции</span>
+                </a>
+              </li>
+              <li class="catalog-dropdown__menu-item">
+                <a href="#" class="catalog-dropdown__menu-link">
+                  <span class="catalog-dropdown__menu-icon"
+                    ><img src="/img/new.svg" alt="new"
+                  /></span>
+                  <span>Новинки</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="catalog-dropdown__content">
+            <div class="catalog-dropdown__grid">
+              <div class="catalog-dropdown__section">
+                <h3 class="catalog-dropdown__section-title">Смартфоны</h3>
+                <div class="catalog-dropdown__items">
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>Apple iPhone</span>
+                    <span class="catalog-dropdown__item-count">123</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="catalog-dropdown__item catalog-dropdown__item--featured">
+                    <span>Смартфоны</span>
+                    <span class="catalog-dropdown__item-count">227</span>
+                  </a>
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>iPhone 16</span>
+                    <span class="catalog-dropdown__item-count">120</span>
+                  </a>
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>Складные</span>
+                    <span class="catalog-dropdown__item-count">30</span>
+                  </a>
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>realme</span>
+                    <span class="catalog-dropdown__item-count">120</span>
+                  </a>
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>Huawei Mate X6</span>
+                    <span class="catalog-dropdown__item-count">100</span>
+                  </a>
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>Кнопочные</span>
+                    <span class="catalog-dropdown__item-count">23</span>
+                  </a>
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>Домашние</span>
+                    <span class="catalog-dropdown__item-count">17</span>
+                  </a>
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>Samsung</span>
+                    <span class="catalog-dropdown__item-count">27</span>
+                  </a>
+                </div>
+              </div>
+              <div class="catalog-dropdown__section">
+                <h3 class="catalog-dropdown__section-title">Гаджеты</h3>
+                <div class="catalog-dropdown__items">
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>Смарт-часы</span>
+                    <span class="catalog-dropdown__item-count">15</span>
+                  </a>
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>Смарт-кольца</span>
+                    <span class="catalog-dropdown__item-count">34</span>
+                  </a>
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>Наушники</span>
+                    <span class="catalog-dropdown__item-count">21</span>
+                  </a>
+                  <a
+                    href="#"
+                    class="catalog-dropdown__item catalog-dropdown__item--featured">
+                    <span>Гарнитуры</span>
+                    <span class="catalog-dropdown__item-count">12</span>
+                  </a>
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>Портативное аудио</span>
+                    <span class="catalog-dropdown__item-count">42</span>
+                  </a>
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>Умные гаджеты</span>
+                    <span class="catalog-dropdown__item-count">46</span>
+                  </a>
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>Очки VR</span>
+                    <span class="catalog-dropdown__item-count">49</span>
+                  </a>
+                  <a href="#" class="catalog-dropdown__item">
+                    <span>Для блогеров</span>
+                    <span class="catalog-dropdown__item-count">32</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu__premenu active" id="preMenu">
+        <div class="premenu__info">
+          <div>
+            <span class="premenu__city"
+              ><img src="img/point.svg" alt="#" />г. Москва</span
+            >
+            <span class="premenu__schedule"
+              ><img src="img/time.svg" alt="#" />Ежедневно 9:00 — 21:00</span
+            >
+          </div>
+
+          <div class="premenu__icons">
+            <div class="premenu__icon">
+              <img class="icon-1" src="/img/tg.svg" alt="#" />
+            </div>
+            <div class="premenu__icon">
+              <img class="icon-2" src="/img/wa.svg" alt="#" />
+            </div>
+          </div>
+        </div>
+        <ul class="premenu__links">
+          <li>
+            <a href="#" id="openCatalogBtn">
+              <span class="catalog-dropdown__menu-icon"
+                ><img src="/img/smartph.svg" alt="smartph" /></span
+              >Каталог</a
+            >
+          </li>
+          <li>
+            <a href="#"><img src="/img/sale.svg" alt="sale" />Акции</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/img/hot.svg" alt="hot" />Горячее предложение</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img src="/img/gift.svg" alt="gift" />Подарочные наборы</a
+            >
+          </li>
+          <li>
+            <a href="#"> <img src="/img/events.svg" alt="events" />События</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/img/brands.svg" alt="brands" />Наши бренды</a
+            >
+          </li>
+          <button class="nav__computer-btn">
+            <span>+</span>
+            <span>Собрать компьютер</span>
+          </button>
+        </ul>
+        <div class="mobile-menu__footer">
+          <div class="mobile-menu__footer-links">
+            <a href="#" class="mobile-menu__footer-link">Доставка</a>
+            <a href="#" class="mobile-menu__footer-link">Оплата</a>
+            <a href="#" class="mobile-menu__footer-link">Контакты</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu__inner">
+        <div class="mobile-menu__header">
+          <button
+            class="mobile-menu__back"
+            id="menuBack"
+            onclick="goBack()"
+            style="display: none"></button>
+          <h3 class="mobile-menu__title" id="menuTitle">Каталог</h3>
+        </div>
+
+        <div class="mobile-menu__content">
+          <div class="mobile-menu__section active" id="mainMenu">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a
+                  href="#"
+                  class="mobile-menu__link"
+                  onclick="showSubmenu('smartphonesMenu', 'Смартфоны и гаджеты')">
+                  <span class="catalog-dropdown__menu-icon"
+                    ><img src="/img/smartph.svg" alt="smartph"
+                  /></span>
+
+                  Смартфоны и гаджеты
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a
+                  href="#"
+                  class="mobile-menu__link"
+                  onclick="showSubmenu('laptopsMenu', 'Ноутбуки и компьютеры')">
+                  <span class="catalog-dropdown__menu-icon"
+                    ><img src="/img/laptop.svg" alt="laptop"
+                  /></span>
+
+                  Ноутбуки и компьютеры
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a
+                  href="#"
+                  class="mobile-menu__link"
+                  onclick="showSubmenu('tvMenu', 'Телевизоры и цифровое ТВ')">
+                  <span class="catalog-dropdown__menu-icon"
+                    ><img src="/img/tv.svg" alt="tv"
+                  /></span>
+
+                  Телевизоры и цифровое ТВ
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a
+                  href="#"
+                  class="mobile-menu__link"
+                  onclick="showSubmenu('audioMenu', 'Аудиотехника')">
+                  <span class="catalog-dropdown__menu-icon"
+                    ><img src="/img/audio.svg" alt="audio"
+                  /></span>
+
+                  Аудиотехника
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">
+                  <span class="catalog-dropdown__menu-icon"
+                    ><img src="/img/sale.svg" alt="sale"
+                  /></span>
+
+                  Акции
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">
+                  <span class="catalog-dropdown__menu-icon"
+                    ><img src="/img/new.svg" alt="new"
+                  /></span>
+
+                  Новинки
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mobile-menu__section" id="smartphonesMenu">
+            <div class="mobile-menu__submenu">
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link">
+                  Apple iPhone <span class="mobile-menu__count">123</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a
+                  href="#"
+                  class="mobile-menu__submenu-link featured mobile-menu__link"
+                  onclick="showSubmenu('gadgetsMenu', 'Гаджеты')"
+                  >Смартфоны <span class="mobile-menu__count">227</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >iPhone 16 <span class="mobile-menu__count">120</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Складные <span class="mobile-menu__count">30</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >realme <span class="mobile-menu__count">120</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Huawei Mate X6 <span class="mobile-menu__count">100</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Кнопочные <span class="mobile-menu__count">23</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Домашние <span class="mobile-menu__count">17</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Samsung <span class="mobile-menu__count">27</span></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile-menu__section" id="gadgetsMenu">
+            <div class="mobile-menu__submenu">
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Смарт-часы <span class="mobile-menu__count">15</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Смарт-кольца <span class="mobile-menu__count">34</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Наушники <span class="mobile-menu__count">21</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link featured"
+                  >Гарнитуры <span class="mobile-menu__count">12</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Портативное аудио
+                  <span class="mobile-menu__count">42</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Умные гаджеты <span class="mobile-menu__count">46</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Очки VR <span class="mobile-menu__count">49</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Для блогеров <span class="mobile-menu__count">32</span></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile-menu__section" id="laptopsMenu">
+            <div class="mobile-menu__submenu">
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Игровые ноутбуки
+                  <span class="mobile-menu__count">45</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Ультрабуки <span class="mobile-menu__count">32</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Рабочие станции <span class="mobile-menu__count">18</span></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile-menu__section" id="tvMenu">
+            <div class="mobile-menu__submenu">
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Smart TV <span class="mobile-menu__count">67</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >4K телевизоры <span class="mobile-menu__count">89</span></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile-menu__section" id="audioMenu">
+            <div class="mobile-menu__submenu">
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Колонки <span class="mobile-menu__count">25</span></a
+                >
+              </div>
+              <div class="mobile-menu__submenu-item">
+                <a href="#" class="mobile-menu__submenu-link"
+                  >Наушники <span class="mobile-menu__count">156</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="mobile-menu__overlay"
+      id="menuOverlay"
+      onclick="closeMobileMenu()"></div>
+
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Отправляйся в приключения с нашими эпическими ЛУТ-корзинами и
+            наборами!
+          </h1>
+          <p class="hero__text">
+            Развивай свои навыки, следуя мудрым стратегиям мастеров, и
+            поднимайся на новый уровень мастерства! С нашей поддержкой каждое
+            твое действие станет частью великого искусства, а победы —
+            результатом точного плана и безупречной подготовки!
+          </p>
+
+          <button class="hero__btn">В каталог</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
